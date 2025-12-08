@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: sih-ml-model
+    env: docker
+    region: singapore
+    plan: free
+    branch: main
+    repo: https://github.com/your-username/SIHFinals 
+    # Note: repo URL needs to be configured in Render UI if connecting manually, 
+    # but this file helps render blueprint.
+    # Assuming the user will point Render to this repo root (SIHFinals) 
+    # and use context filtering or root directory settings.
+    rootDir: SIHProject
+    envVars:
+      - key: PORT
+        value: 5000
+    healthCheckPath: /health

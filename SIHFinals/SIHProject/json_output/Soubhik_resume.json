@@ -1,0 +1,9 @@
+{
+    "Position": "Associate Software Engineer",
+    "location": "Raipur,  Chhattisgarh",
+    "qualification": "[Insert Degree, e.g., B.Tech in CSE]",
+    "experience": "2 Years",
+    "skills": "C, C++, JavaScript, TypeScript, Go, HTML, CSS, React.js, Next.js, Redux, Node.js, Nest.js, Express.js, Feathers.js, Docker, Apache Kafka, AWS, Firebase, GitHub Actions, MongoDB",
+    "summary": "",
+    "work_experience": "Currently working as an Associate Software Engineer at Creuto Cloud (Apr 2024 - Present), focusing on integrating Razorpay and Stripe payments, backend services using FCM and Apple PNS, and RTC systems with WebSockets. Previously worked as an SDE Intern at Creuto Cloud (Jan 2024 - Apr 2024), developing REST APIs for internal messaging systems and engineering core APIs for ERP software."
+}

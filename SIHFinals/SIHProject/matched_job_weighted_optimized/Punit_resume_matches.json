@@ -1,0 +1,142 @@
+[
+    {
+        "match_score": 0.35390791828257084,
+        "breakdown": {
+            "pos_score": 0.4094378245239038,
+            "loc_score": 0.3766423336259755,
+            "skill_score": 0.18098152966413145
+        },
+        "job_details": {
+            "company": "Tech Mahindra Limited",
+            "job description": "IT Helpdesk Trainee (Internal). 12-month role supporting internal employees. Learn to troubleshoot hardware/software issues,  set up new user accounts,  and manage IT assets.",
+            "required qualification": "Diploma in Computer Science/IT or B.Sc (IT). Must meet PMIS age (21-24) and income (<8L) criteria.",
+            "location": "Bhubaneswar,  Odisha"
+        }
+    },
+    {
+        "match_score": 0.35001799831944774,
+        "breakdown": {
+            "pos_score": 0.43055612209414906,
+            "loc_score": 0.29479603687272043,
+            "skill_score": 0.2315056310527855
+        },
+        "job_details": {
+            "company": "Cognizant Technology Solutions",
+            "job description": "IT Recruitment Support Trainee. Provide administrative support to the talent acquisition team. Learn to source candidates,  schedule interviews,  and manage applicant data.",
+            "required qualification": "BBA (HR) or B.A. (Psychology/English) graduate (non-premier). Must meet PMIS age (21-24) and income (<8L) criteria.",
+            "location": "Hyderabad,  Telangana"
+        }
+    },
+    {
+        "match_score": 0.33856099245126986,
+        "breakdown": {
+            "pos_score": 0.3547222305284502,
+            "loc_score": 0.41605186801172056,
+            "skill_score": 0.18192158391764307
+        },
+        "job_details": {
+            "company": "ITC Limited",
+            "job description": "Agri-Business Trainee (E-Choupal). 12-month field role. Interact with farmers,  learn commodity procurement processes,  and support warehouse operations.",
+            "required qualification": "B.Sc (Agriculture) (non-premier institute). Must meet PMIS age (21-24) and income (<8L) criteria.",
+            "location": "Bhopal,  Madhya Pradesh"
+        }
+    },
+    {
+        "match_score": 0.3372478365248092,
+        "breakdown": {
+            "pos_score": 0.4092677989500546,
+            "loc_score": 0.33660378785524575,
+            "skill_score": 0.15816400346604087
+        },
+        "job_details": {
+            "company": "Oil India Limited",
+            "job description": "IT Helpdesk Trainee. 12-month role at a field office. Provide basic IT support (hardware,  software,  network) to employees. Log and resolve tickets.",
+            "required qualification": "Diploma in Computer Science/IT. Must meet PMIS age (21-24) and income (<8L) criteria.",
+            "location": "Duliajan,  Assam"
+        }
+    },
+    {
+        "match_score": 0.3322977084966953,
+        "breakdown": {
+            "pos_score": 0.36937321079463514,
+            "loc_score": 0.3717239064238658,
+            "skill_score": 0.18046965586109004
+        },
+        "job_details": {
+            "company": "ITC Limited",
+            "job description": "HR Trainee (Admin). 12-month office role at a factory. Support HR functions like time-keeping,  employee records,  and training coordination.",
+            "required qualification": "BBA (HR) graduate (non-premier institute). Must meet PMIS age (21-24) and income (<8L) criteria.",
+            "location": "Sahara,  Uttar Pradesh"
+        }
+    },
+    {
+        "match_score": 0.3317275535097242,
+        "breakdown": {
+            "pos_score": 0.4192858036267831,
+            "loc_score": 0.25420004177366157,
+            "skill_score": 0.22912319582117124
+        },
+        "job_details": {
+            "company": "HCL Technologies Limited",
+            "job description": "IT Helpdesk Trainee (Internal). 12-month role providing basic IT support to HCL employees. Handle password resets,  software installation.",
+            "required qualification": "B.Sc (IT) or BCA (non-premier institute). Must meet PMIS age (21-24) and income (<8L) criteria.",
+            "location": "Bengaluru,  Karnataka"
+        }
+    },
+    {
+        "match_score": 0.33008328541357396,
+        "breakdown": {
+            "pos_score": 0.36492751270722457,
+            "loc_score": 0.3937491220721857,
+            "skill_score": 0.14747396219152975
+        },
+        "job_details": {
+            "company": "Tech Mahindra Limited",
+            "job description": "IT Helpdesk Trainee (Voice). 12-month role providing technical support to customers via phone. Troubleshoot hardware/software issues.",
+            "required qualification": "B.Sc (IT) or BCA (non-premier institute). Good communication skills. Must meet PMIS eligibility.",
+            "location": "Noida,  Uttar Pradesh"
+        }
+    },
+    {
+        "match_score": 0.3292297957902842,
+        "breakdown": {
+            "pos_score": 0.4251380094733119,
+            "loc_score": 0.23886766217820138,
+            "skill_score": 0.22500246200083934
+        },
+        "job_details": {
+            "company": "HCL Technologies Limited",
+            "job description": "IT Helpdesk Trainee (Internal). 12-month role providing basic IT support to HCL employees. Handle password resets,  software installation.",
+            "required qualification": "B.Sc (IT) or BCA (non-premier institute). Must meet PMIS age (21-24) and income (<8L) criteria.",
+            "location": "Chennai,  Tamil Nadu"
+        }
+    },
+    {
+        "match_score": 0.3287147269438015,
+        "breakdown": {
+            "pos_score": 0.4168611064870309,
+            "loc_score": 0.28321918867408297,
+            "skill_score": 0.1765920854903057
+        },
+        "job_details": {
+            "company": "Oil and Natural Gas Corporation Limited",
+            "job description": "Administrative Support Trainee. 12-month office role supporting a regional office. Assist in file management,  data entry,  and procurement documentation.",
+            "required qualification": "B.A. or B.Com graduate (non-premier institute). Basic computer skills required. Must meet PMIS age and income criteria.",
+            "location": "Dehradun,  Uttarakhand"
+        }
+    },
+    {
+        "match_score": 0.3280478665832484,
+        "breakdown": {
+            "pos_score": 0.3929321443675894,
+            "loc_score": 0.34394128310928596,
+            "skill_score": 0.14199704733333968
+        },
+        "job_details": {
+            "company": "Tech Mahindra Limited",
+            "job description": "Network Trainee (Internal IT). 12-month role supporting the internal IT team. Assist with LAN/WAN troubleshooting,  managing network assets,  and cabling.",
+            "required qualification": "Diploma in Computer Science/IT. Must meet PMIS age (21-24) and income (<8L) criteria.",
+            "location": "Bengaluru,  Karnataka"
+        }
+    }
+]

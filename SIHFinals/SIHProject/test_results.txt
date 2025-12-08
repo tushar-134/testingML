@@ -1,0 +1,101 @@
+Starting API Tests...
+
+============================================================
+Testing /health endpoint
+============================================================
+Status Code: 200
+Response: {
+  "jobs_loaded": 761,
+  "model": "tazarov/all-minilm-l6-v2-f32:latest",
+  "status": "healthy"
+}
+[PASS] Health check passed!
+
+============================================================
+Testing /match-jobs endpoint
+============================================================
+Input: {
+  "position": "Software Engineer",
+  "skills": "Python, JavaScript, Machine Learning, React",
+  "summary": "Experienced developer with expertise in full-stack development and ML",
+  "qualification": "B.Tech Computer Science",
+  "experience": "2 years",
+  "work_experience": "Worked on web applications and ML models at tech startups"
+}
+
+Status Code: 200
+Response Time: 2241.06ms
+[PASS] Successfully matched jobs!
+Total jobs searched: 761
+Matches returned: 20
+
+Top 5 Matches:
+
+1. N/A at HCL Technologies Limited
+   Match Score: 0.4274
+   Location: Chennai,  Tamil Nadu
+   Breakdown:
+     - Position: 0.4311
+     - Skills: 0.3559
+     - Qualification: 0.5158
+     - Experience: 0.4126
+
+2. N/A at HCL Technologies Limited
+   Match Score: 0.4263
+   Location: Chennai,  Tamil Nadu
+   Breakdown:
+     - Position: 0.4032
+     - Skills: 0.3319
+     - Qualification: 0.6089
+     - Experience: 0.4006
+
+3. N/A at Cognizant Technology Solutions
+   Match Score: 0.4244
+   Location: Hyderabad,  Telangana
+   Breakdown:
+     - Position: 0.4353
+     - Skills: 0.3115
+     - Qualification: 0.5591
+     - Experience: 0.3881
+
+4. N/A at HCL Technologies Limited
+   Match Score: 0.4237
+   Location: Nagpur,  Maharashtra
+   Breakdown:
+     - Position: 0.4023
+     - Skills: 0.3381
+     - Qualification: 0.5980
+     - Experience: 0.3851
+
+5. N/A at HCL Technologies Limited
+   Match Score: 0.4200
+   Location: Pune,  Maharashtra
+   Breakdown:
+     - Position: 0.4233
+     - Skills: 0.3588
+     - Qualification: 0.4970
+     - Experience: 0.4044
+
+============================================================
+Testing /search-jobs endpoint
+============================================================
+
+Searching for: 'python'
+[PASS] Found 0 results
+
+Searching for: 'engineer'
+[PASS] Found 35 results
+  Showing first 3:
+  1. N/A - Oil and Natural Gas Corporation Limited
+  2. N/A - Larsen and Toubro Limited
+  3. N/A - Mahindra and Mahindra Limited
+
+Searching for: 'developer'
+[PASS] Found 0 results
+
+Getting all jobs (no query)
+[PASS] Found 0 results
+
+============================================================
+[PASS] All API tests completed successfully!
+============================================================

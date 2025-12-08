@@ -1,0 +1,142 @@
+[
+    {
+        "match_score": 0.34759941632837454,
+        "breakdown": {
+            "pos_score": 0.39970684431016384,
+            "loc_score": 0.29479603687272043,
+            "skill_score": 0.29653591555738235
+        },
+        "job_details": {
+            "company": "Cognizant Technology Solutions",
+            "job description": "IT Recruitment Support Trainee. Provide administrative support to the talent acquisition team. Learn to source candidates,  schedule interviews,  and manage applicant data.",
+            "required qualification": "BBA (HR) or B.A. (Psychology/English) graduate (non-premier). Must meet PMIS age (21-24) and income (<8L) criteria.",
+            "location": "Hyderabad,  Telangana"
+        }
+    },
+    {
+        "match_score": 0.3422841013710778,
+        "breakdown": {
+            "pos_score": 0.35471479297945474,
+            "loc_score": 0.3766423336259755,
+            "skill_score": 0.25967002396778915
+        },
+        "job_details": {
+            "company": "Tech Mahindra Limited",
+            "job description": "IT Helpdesk Trainee (Internal). 12-month role supporting internal employees. Learn to troubleshoot hardware/software issues,  set up new user accounts,  and manage IT assets.",
+            "required qualification": "Diploma in Computer Science/IT or B.Sc (IT). Must meet PMIS age (21-24) and income (<8L) criteria.",
+            "location": "Bhubaneswar,  Odisha"
+        }
+    },
+    {
+        "match_score": 0.3371312497344863,
+        "breakdown": {
+            "pos_score": 0.3907613446644888,
+            "loc_score": 0.30467095816313305,
+            "skill_score": 0.25174644976651006
+        },
+        "job_details": {
+            "company": "Reliance Retail Limited",
+            "job description": "E-commerce Warehouse Trainee. 12-month role in a fulfillment center (JioMart). Learn inbound/outbound logistics,  order picking/packing,  and inventory software.",
+            "required qualification": "Class 12 Pass or B.A. (any discipline). Must meet PMIS age (21-24) and income (<8L) criteria.",
+            "location": "Bengaluru,  Karnataka"
+        }
+    },
+    {
+        "match_score": 0.33572748974640043,
+        "breakdown": {
+            "pos_score": 0.3766067770634045,
+            "loc_score": 0.34231383198999826,
+            "skill_score": 0.2236497580884935
+        },
+        "job_details": {
+            "company": "Tech Mahindra Limited",
+            "job description": "Customer Support Trainee (Voice). 12-month role handling customer queries (voice) for a telecom client. Troubleshoot service issues.",
+            "required qualification": "B.A. or B.Sc (any discipline,  non-premier). Good communication skills. Must meet PMIS eligibility.",
+            "location": "Chandigarh,  Punjab"
+        }
+    },
+    {
+        "match_score": 0.3329080687700242,
+        "breakdown": {
+            "pos_score": 0.3412767744552161,
+            "loc_score": 0.3937491220721857,
+            "skill_score": 0.22072472460380238
+        },
+        "job_details": {
+            "company": "Tech Mahindra Limited",
+            "job description": "IT Helpdesk Trainee (Voice). 12-month role providing technical support to customers via phone. Troubleshoot hardware/software issues.",
+            "required qualification": "B.Sc (IT) or BCA (non-premier institute). Good communication skills. Must meet PMIS eligibility.",
+            "location": "Noida,  Uttar Pradesh"
+        }
+    },
+    {
+        "match_score": 0.3298388425899529,
+        "breakdown": {
+            "pos_score": 0.37106062332572426,
+            "loc_score": 0.33681120536852294,
+            "skill_score": 0.21632584658266943
+        },
+        "job_details": {
+            "company": "Tech Mahindra Limited",
+            "job description": "Customer Support Trainee (Voice). 12-month role handling customer queries (voice) for a telecom client. Troubleshoot service issues.",
+            "required qualification": "B.A. or B.Sc (any discipline,  non-premier). Good communication skills. Must meet PMIS eligibility.",
+            "location": "Kolkata,  West Bengal"
+        }
+    },
+    {
+        "match_score": 0.3260368192790478,
+        "breakdown": {
+            "pos_score": 0.36782635620130877,
+            "loc_score": 0.3238256055319879,
+            "skill_score": 0.2248797975939854
+        },
+        "job_details": {
+            "company": "Tech Mahindra Limited",
+            "job description": "Customer Support Trainee (Voice). 12-month role handling customer queries (voice) for a telecom client. Troubleshoot service issues.",
+            "required qualification": "B.A. or B.Sc (any discipline,  non-premier). Good communication skills. Must meet PMIS eligibility.",
+            "location": "Chennai,  Tamil Nadu"
+        }
+    },
+    {
+        "match_score": 0.32582878627094786,
+        "breakdown": {
+            "pos_score": 0.3386484495231473,
+            "loc_score": 0.3717239064238658,
+            "skill_score": 0.2249369479110722
+        },
+        "job_details": {
+            "company": "ITC Limited",
+            "job description": "HR Trainee (Admin). 12-month office role at a factory. Support HR functions like time-keeping,  employee records,  and training coordination.",
+            "required qualification": "BBA (HR) graduate (non-premier institute). Must meet PMIS age (21-24) and income (<8L) criteria.",
+            "location": "Sahara,  Uttar Pradesh"
+        }
+    },
+    {
+        "match_score": 0.32577042348527135,
+        "breakdown": {
+            "pos_score": 0.37761153165631534,
+            "loc_score": 0.26517294576214284,
+            "skill_score": 0.2870638696423542
+        },
+        "job_details": {
+            "company": "Larsen and Toubro Limited",
+            "job description": "HR Trainee (Site Admin). 12-month role at a large project site. Assist with worker time-keeping,  payroll data collection,  and managing site administration.",
+            "required qualification": "BBA (HR) or B.A. (any discipline) graduate (non-premier). Must meet PMIS age and income criteria.",
+            "location": "Ahmedabad,  Gujarat"
+        }
+    },
+    {
+        "match_score": 0.3257323309366706,
+        "breakdown": {
+            "pos_score": 0.34746028389883044,
+            "loc_score": 0.3828282099262508,
+            "skill_score": 0.18576863004690072
+        },
+        "job_details": {
+            "company": "Hindustan Unilever Limited",
+            "job description": "Factory Operations Trainee. 12-month hands-on role at a food/beverage plant. Learn production line operations,  packaging,  and factory safety protocols.",
+            "required qualification": "ITI (Fitter/Electrician) or Class 12 Pass (Science). Must meet PMIS age (21-24) and income (<8L) criteria.",
+            "location": "Haridwar,  Uttarakhand"
+        }
+    }
+]

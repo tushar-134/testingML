@@ -1,0 +1,9 @@
+{
+    "Position": "Trainee",
+    "location": "Raipur,  Chhattisgarh",
+    "qualification": "[Insert Degree, e.g., B.Tech in AI & DS]",
+    "experience": "Fresher",
+    "skills": "C, C++, Go Lang, Python, JavaScript, Typescript, HTML5, TensorFlow, Nodejs, Reactjs, Langchain, Git, MLFlow, Docker, AWS, Apache, Kafka, MongoDB, PostgreSQL",
+    "summary": "",
+    "work_experience": "Completed the Intel Unnati Industrial Training Program (May 2024 - June 2024). Developed a web app project that incorporated automatic exploratory data analysis and preprocessing, generating actionable insights from large datasets using Gemini LLM and Langchain library under the guidance of industry experts."
+}

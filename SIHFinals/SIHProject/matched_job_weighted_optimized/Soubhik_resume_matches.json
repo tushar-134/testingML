@@ -1,0 +1,142 @@
+[
+    {
+        "match_score": 0.3251804542318588,
+        "breakdown": {
+            "pos_score": 0.3878898300700194,
+            "loc_score": 0.3025993852111485,
+            "skill_score": 0.2022786181675228
+        },
+        "job_details": {
+            "company": "HCL Technologies Limited",
+            "job description": "IT Helpdesk Trainee (Internal). 12-month role providing basic IT support to HCL employees. Handle password resets,  software installation.",
+            "required qualification": "B.Sc (IT) or BCA (non-premier institute). Must meet PMIS age (21-24) and income (<8L) criteria.",
+            "location": "Bengaluru,  Karnataka"
+        }
+    },
+    {
+        "match_score": 0.32062775617470884,
+        "breakdown": {
+            "pos_score": 0.3578723153872341,
+            "loc_score": 0.35156233160291234,
+            "skill_score": 0.18111449500109078
+        },
+        "job_details": {
+            "company": "Tech Mahindra Limited",
+            "job description": "IT Helpdesk Trainee (Internal). 12-month role supporting internal employees. Learn to troubleshoot hardware/software issues,  set up new user accounts,  and manage IT assets.",
+            "required qualification": "Diploma in Computer Science/IT or B.Sc (IT). Must meet PMIS age (21-24) and income (<8L) criteria.",
+            "location": "Bhubaneswar,  Odisha"
+        }
+    },
+    {
+        "match_score": 0.32013610557047084,
+        "breakdown": {
+            "pos_score": 0.3715060517311833,
+            "loc_score": 0.2981802814248115,
+            "skill_score": 0.2246449763871789
+        },
+        "job_details": {
+            "company": "HCL Technologies Limited",
+            "job description": "IT Helpdesk Trainee (Internal). 12-month role providing basic IT support to HCL employees. Handle password resets,  software installation.",
+            "required qualification": "B.Sc (IT) or BCA (non-premier institute). Must meet PMIS age (21-24) and income (<8L) criteria.",
+            "location": "Pune,  Maharashtra"
+        }
+    },
+    {
+        "match_score": 0.3185938097656144,
+        "breakdown": {
+            "pos_score": 0.3768896547528049,
+            "loc_score": 0.30679257857352726,
+            "skill_score": 0.19055604408576904
+        },
+        "job_details": {
+            "company": "HCL Technologies Limited",
+            "job description": "IT Helpdesk Trainee (Internal). 12-month role providing basic IT support to HCL employees. Handle password resets,  software installation.",
+            "required qualification": "B.Sc (IT) or BCA (non-premier institute). Must meet PMIS age (21-24) and income (<8L) criteria.",
+            "location": "Noida,  Uttar Pradesh"
+        }
+    },
+    {
+        "match_score": 0.3185938097656144,
+        "breakdown": {
+            "pos_score": 0.3768896547528049,
+            "loc_score": 0.30679257857352726,
+            "skill_score": 0.19055604408576904
+        },
+        "job_details": {
+            "company": "HCL Technologies Limited",
+            "job description": "IT Helpdesk Trainee (Internal). 12-month role providing basic IT support to HCL employees. Handle password resets,  software installation.",
+            "required qualification": "B.Sc (IT) or BCA (non-premier institute). Must meet PMIS age (21-24) and income (<8L) criteria.",
+            "location": "Noida,  Uttar Pradesh"
+        }
+    },
+    {
+        "match_score": 0.3159697011628692,
+        "breakdown": {
+            "pos_score": 0.3859651982330161,
+            "loc_score": 0.28149186132367887,
+            "skill_score": 0.1926977182462874
+        },
+        "job_details": {
+            "company": "HCL Technologies Limited",
+            "job description": "IT Helpdesk Trainee (Internal). 12-month role providing basic IT support to HCL employees. Handle password resets,  software installation.",
+            "required qualification": "B.Sc (IT) or BCA (non-premier institute). Must meet PMIS age (21-24) and income (<8L) criteria.",
+            "location": "Chennai,  Tamil Nadu"
+        }
+    },
+    {
+        "match_score": 0.3154885138289932,
+        "breakdown": {
+            "pos_score": 0.37217957309480376,
+            "loc_score": 0.31704157762695306,
+            "skill_score": 0.17143126996752697
+        },
+        "job_details": {
+            "company": "Asian Paints Limited",
+            "job description": "Warehouse Operations Trainee. 12-month role at a distribution center. Learn inventory management (SAP),  order processing,  and logistics coordination.",
+            "required qualification": "B.Com (Logistics) or BBA (non-premier institute). Must meet PMIS age (21-24) and income (<8L) criteria.",
+            "location": "Kasna,  Uttar Pradesh"
+        }
+    },
+    {
+        "match_score": 0.31536851503182306,
+        "breakdown": {
+            "pos_score": 0.3715983283772243,
+            "loc_score": 0.3177375424192982,
+            "skill_score": 0.1712404405871074
+        },
+        "job_details": {
+            "company": "Asian Paints Limited",
+            "job description": "Warehouse Operations Trainee. 12-month role at a regional distribution center. Learn inventory management (SAP),  order processing,  and logistics coordination.",
+            "required qualification": "B.Com or BBA (non-premier institute). Must meet PMIS age (21-24) and income (<8L) criteria.",
+            "location": "Kasna,  Uttar Pradesh"
+        }
+    },
+    {
+        "match_score": 0.3149030370767702,
+        "breakdown": {
+            "pos_score": 0.3462896368280969,
+            "loc_score": 0.3685165656091185,
+            "skill_score": 0.1560162448999311
+        },
+        "job_details": {
+            "company": "Asian Paints Limited",
+            "job description": "Supply Chain Trainee (Logistics). 12-month office role at a plant. Coordinate with transporters,  manage dispatch documentation,  and track shipments.",
+            "required qualification": "B.Com (Logistics) or BBA (non-premier institute). Must meet PMIS age (21-24) and income (<8L) criteria.",
+            "location": "Rohtak,  Haryana"
+        }
+    },
+    {
+        "match_score": 0.3145132696065477,
+        "breakdown": {
+            "pos_score": 0.36596993995116905,
+            "loc_score": 0.32536431816331324,
+            "skill_score": 0.169595020909846
+        },
+        "job_details": {
+            "company": "Asian Paints Limited",
+            "job description": "Warehouse Operations Trainee. 12-month role at a distribution center. Learn inventory management (SAP),  order processing,  and logistics coordination.",
+            "required qualification": "B.Com (Logistics) or BBA (non-premier institute). Must meet PMIS age (21-24) and income (<8L) criteria.",
+            "location": "Mysuru,  Karnataka"
+        }
+    }
+]

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML Job Matching System - Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .results {
+            display: none;
+        }
+
+        .results.show {
+            display: block;
+        }
+
+        .job-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #667eea;
+            transition: transform 0.2s;
+        }
+
+        .job-card:hover {
+            transform: translateX(5px);
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 10px;
+        }
+
+        .job-title {
+            font-size: 1.3em;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .match-score {
+            background: #667eea;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .job-company {
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+
+        .job-location {
+            color: #888;
+            font-size: 0.9em;
+            margin-bottom: 12px;
+        }
+
+        .score-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .score-item {
+            background: white;
+            padding: 8px;
+            border-radius: 6px;
+            text-align: center;
+        }
+
+        .score-label {
+            font-size: 0.8em;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        .score-value {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            display: none;
+        }
+
+        .loading.show {
+            display: block;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 20px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error {
+            background: #ff4757;
+            color: white;
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        .error.show {
+            display: block;
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+            padding: 15px;
+            color: white;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎯 ML Job Matching System</h1>
+            <div class="status-badge" id="status">Checking...</div>
+        </div>
+
+        <div class="stats" id="stats" style="display: none;">
+            <div class="stat-card">
+                <div class="stat-value" id="jobsLoaded">-</div>
+                <div class="stat-label">Jobs in Database</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="modelName">-</div>
+                <div class="stat-label">AI Model</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value" id="responseTime">-</div>
+                <div class="stat-label">Response Time</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2 style="margin-bottom: 20px;">Enter Your Resume Details</h2>
+            
+            <div class="error" id="error"></div>
+
+            <form id="matchForm">
+                <div class="form-group">
+                    <label for="position">Desired Position</label>
+                    <input type="text" id="position" name="position" placeholder="e.g., Software Engineer" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="skills">Skills (comma-separated)</label>
+                    <input type="text" id="skills" name="skills" placeholder="e.g., Python, JavaScript, Machine Learning, React" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="summary">Professional Summary</label>
+                    <textarea id="summary" name="summary" placeholder="Brief summary of your experience and expertise" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="qualification">Qualification</label>
+                    <input type="text" id="qualification" name="qualification" placeholder="e.g., B.Tech Computer Science" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Years of Experience</label>
+                    <input type="text" id="experience" name="experience" placeholder="e.g., 2 years" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="workExperience">Work Experience Details</label>
+                    <textarea id="workExperience" name="work_experience" placeholder="Describe your work experience" required></textarea>
+                </div>
+
+                <button type="submit" class="btn" id="submitBtn">Find Matching Jobs</button>
+            </form>
+        </div>
+
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <p>Searching for matching jobs...</p>
+        </div>
+
+        <div class="results" id="results">
+            <div class="card">
+                <h2 style="margin-bottom: 20px;">Top Job Matches</h2>
+                <div id="jobsList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:5000';
+
+        // Check API health on load
+        async function checkHealth() {
+            try {
+                const response = await fetch(`${API_BASE}/health`);
+                const data = await response.json();
+                
+                if (data.status === 'healthy') {
+                    document.getElementById('status').textContent = '✓ System Online';
+                    document.getElementById('status').style.background = 'rgba(76, 175, 80, 0.3)';
+                    
+                    document.getElementById('jobsLoaded').textContent = data.jobs_loaded;
+                    document.getElementById('modelName').textContent = 'all-minilm';
+                    document.getElementById('stats').style.display = 'grid';
+                }
+            } catch (error) {
+                document.getElementById('status').textContent = '✗ System Offline';
+                document.getElementById('status').style.background = 'rgba(244, 67, 54, 0.3)';
+                showError('Failed to connect to API. Make sure the Flask server is running.');
+            }
+        }
+
+        // Load sample data
+        function loadSampleData() {
+            document.getElementById('position').value = 'Software Engineer';
+            document.getElementById('skills').value = 'Python, JavaScript, Machine Learning, React';
+            document.getElementById('summary').value = 'Experienced developer with expertise in full-stack development and ML';
+            document.getElementById('qualification').value = 'B.Tech Computer Science';
+            document.getElementById('experience').value = '2 years';
+            document.getElementById('workExperience').value = 'Worked on web applications and ML models at tech startups';
+        }
+
+        // Handle form submission
+        document.getElementById('matchForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            hideError();
+            hideResults();
+            showLoading();
+
+            const formData = {
+                position: document.getElementById('position').value,
+                skills: document.getElementById('skills').value,
+                summary: document.getElementById('summary').value,
+                qualification: document.getElementById('qualification').value,
+                experience: document.getElementById('experience').value,
+                work_experience: document.getElementById('workExperience').value
+            };
+
+            try {
+                const startTime = performance.now();
+                const response = await fetch(`${API_BASE}/match-jobs`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                const endTime = performance.now();
+                const responseTime = ((endTime - startTime) / 1000).toFixed(2);
+                document.getElementById('responseTime').textContent = `${responseTime}s`;
+
+                const data = await response.json();
+                
+                hideLoading();
+
+                if (data.success) {
+                    displayResults(data.matches);
+                } else {
+                    showError(data.error || 'Failed to match jobs');
+                }
+            } catch (error) {
+                hideLoading();
+                showError('Error: ' + error.message);
+            }
+        });
+
+        function displayResults(matches) {
+            const jobsList = document.getElementById('jobsList');
+            jobsList.innerHTML = '';
+
+            matches.slice(0, 10).forEach((match, index) => {
+                const job = match.job_details;
+                const card = document.createElement('div');
+                card.className = 'job-card';
+                
+                card.innerHTML = `
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">${index + 1}. ${job['job title'] || 'Position Available'}</div>
+                            <div class="job-company">🏢 ${job.company || 'Company Name'}</div>
+                            <div class="job-location">📍 ${job.location || 'Location'}</div>
+                        </div>
+                        <div class="match-score">${(match.match_score * 100).toFixed(1)}%</div>
+                    </div>
+                    <div class="score-breakdown">
+                        <div class="score-item">
+                            <div class="score-label">Position</div>
+                            <div class="score-value">${(match.breakdown.position_score * 100).toFixed(0)}%</div>
+                        </div>
+                        <div class="score-item">
+                            <div class="score-label">Skills</div>
+                            <div class="score-value">${(match.breakdown.skills_score * 100).toFixed(0)}%</div>
+                        </div>
+                        <div class="score-item">
+                            <div class="score-label">Qualification</div>
+                            <div class="score-value">${(match.breakdown.qualification_score * 100).toFixed(0)}%</div>
+                        </div>
+                        <div class="score-item">
+                            <div class="score-label">Experience</div>
+                            <div class="score-value">${(match.breakdown.experience_score * 100).toFixed(0)}%</div>
+                        </div>
+                    </div>
+                `;
+                
+                jobsList.appendChild(card);
+            });
+
+            showResults();
+        }
+
+        function showLoading() {
+            document.getElementById('loading').classList.add('show');
+            document.getElementById('submitBtn').disabled = true;
+        }
+
+        function hideLoading() {
+            document.getElementById('loading').classList.remove('show');
+            document.getElementById('submitBtn').disabled = false;
+        }
+
+        function showResults() {
+            document.getElementById('results').classList.add('show');
+        }
+
+        function hideResults() {
+            document.getElementById('results').classList.remove('show');
+        }
+
+        function showError(message) {
+            const errorDiv = document.getElementById('error');
+            errorDiv.textContent = message;
+            errorDiv.classList.add('show');
+        }
+
+        function hideError() {
+            document.getElementById('error').classList.remove('show');
+        }
+
+        // Initialize
+        checkHealth();
+        loadSampleData();
+    </script>
+</body>
+</html>

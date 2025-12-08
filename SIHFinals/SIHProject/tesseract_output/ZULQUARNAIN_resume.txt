@@ -1,0 +1,62 @@
+ZULQUARNAIN KHAN
+
++91-9439690749 | zulquarnainkhan615@gmail.com | LinkedIn | GitHub | Portfolio
+
+Education
+International Institute of Information Technology Bhubaneswar, Odisha
+Bachelor of Technology in Computer Science, 3rd year CGPA: 9.04
+Experience
+Web Developer June 2024 - Present
+STAKESMEN Hyderabad, Telangana
+
+— Developed and maintained an interactive online learning platform named Dhrona, targeting Web and
+Android devices, increasing user engagement by 30%.
+
+— Designed and implemented over 50 API requests and corresponding routes, enhancing functionality and reducing
+response time by 25%.
+
+— Optimized app performance through caching (backend) and lazy loading (frontend), improving Google
+Lighthouse performance scores from 36 to 91 for desktop and 76 for mobile devices.
+
+— Led end-to-end testing and troubleshooting during the app’s development phase, identifying and resolving 90%
+of critical bugs before release.
+
+Projects
+Z Clothing | LINK React, HTML, CSS, JS, Azios, Mongoose, Express, Node, bcrypiJs, JWT
+
+— Developed a full-stack e-commerce web application for a single-vendor clothing store, implementing secure
+user authentication, product management, and order processing.
+
+— Integrated a dynamic shopping cart, checkout process, and an admin dashboard to manage inventory,
+improving management efficiency by 40%.
+
+Jythu | LINK React, HTML, CSS, JS, Tailwind
+— Built a responsive landing page for Jythu, focusing on an intuitive user interface, smooth scrolling, and
+animated transitions.
+— Implemented a contact form to capture user inquiries, enhancing lead generation efforts.
+
+HarvestHarbor | LINK Solidity, Vite-React, Web3, Flask, Python, TensorFlow, HTML, CSS, JS
+— Led the development of HarvestHarbor, a decentralized application providing secure crop advice using
+machine learning, facilitating the buying and selling of crops and equipments for farmers.
+— Implemented multi-vendor functionality and Solidity smart contracts for secure transactions.
+Technical Skills
+e Languages: JavaScript, Python, C, C++, SQL, HTML, CSS, Solidity, TypeScript
+
+e Frameworks/Libraries: React, React Native, Web3, Redux, Tailwind, Axios, Bootstrap, Mocha, Mongoose,
+Express, Node, Truffle, Hardhat
+
+e Developer Tools: VS Code, Docker, MongoDB Compass, Expo, ChatGPT, Postman API, Google Play Console,
+Claude AI, Thunder Client, Remix-IDE, Metamask, Jupyter, CodeBlocks, Git/GitHub, Firebase
+
+e Others: DBMS, Problem Solving, Project Management, Leadership, Teamwork, Public Speaking, Analytical
+Thinking
+Achievements / Certifications
+Expert at CodeStudio (Code360): 350+ problems solved | LINK
+Hackathons: Hackfest (Top 4 out of 120 teams), Smart Speedathon (Runner Up)
+Certifications:
+
+-— META/Facebook: What is Metaverse?
+
+— University at Buffalo: Blockchain (Blockchain Basics, Smart Contracts, Decentralized Applications, Blockchain
+Platforms)
+— Google: Project Management (Foundations, Project Initiation: Starting a Successful Project)
