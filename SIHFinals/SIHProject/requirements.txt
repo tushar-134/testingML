@@ -1,8 +1,0 @@
-ollama
-numpy
-pandas
-tqdm
-flask
-flask-cors
-python-dotenv
-gunicorn

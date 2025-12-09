@@ -1,9 +1,0 @@
-{
-    "Position": "Web Developer",
-    "location": "Itanagar,  Arunachal Pradesh",
-    "qualification": "[Insert Degree, e.g., B.Tech in Computer Science]",
-    "experience": "1.5 Years",
-    "skills": "JavaScript, Python, C, C++, SQL, HTML, CSS, Solidity, TypeScript, React, React Native, Web3, Redux, Tailwind, Axios, Bootstrap, Mocha, Mongoose, Express, Node, Truffle, Hardhat, VS Code, Docker, MongoDB Compass, Expo, ChatGPT, Postman API, Git/GitHub, Firebase",
-    "summary": "",
-    "work_experience": "Currently working as a Web Developer at STAKESMEN (June 2024 - Present). Developed and maintained 'Dhrona', an interactive online learning platform, increasing user engagement by 30%. Designed over 50 API requests, optimized app performance through caching and lazy loading (improving Lighthouse scores significantly), and led end-to-end testing to resolve critical bugs."
-}
