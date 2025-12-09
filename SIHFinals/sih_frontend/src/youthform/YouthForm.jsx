@@ -8,6 +8,10 @@ import Step3Education from "./Step3Education"
 import Step4Skills from "./step4skills"
 import Step5docu from "./Step5docu"
 import Step6Review from "./Step6review";
+// REMOVED: Step7JobRecommendations - module not found
+// import Step7JobRecommendations from "./Step7JobRecommendations";
+// REMOVED: mlJobMatchingService - module not found
+// import { matchJobsForYouth } from "./mlJobMatchingService";
 import { useLanguage } from "../contexts/LanguageContext";
 import { translations } from "../translations/translations";
 
@@ -16,6 +20,9 @@ const STORAGE_KEY = "youth_reg_v3";
 export default function RegistrationForm() {
   const [step, setStep] = useState(1);
   const [saving, setSaving] = useState(false);
+  const [loadingJobs, setLoadingJobs] = useState(false);
+  const [jobMatches, setJobMatches] = useState(null);
+  const [showRecommendations, setShowRecommendations] = useState(false);
   const { language } = useLanguage();
   const t = translations[language].youthForm;
 
@@ -117,9 +124,10 @@ export default function RegistrationForm() {
       return;
     }
 
+    setLoadingJobs(true);
+
     try {
-      // MODIFIED: Removed login check - users can submit during registration flow
-      // Token is automatically saved after password creation
+      // STEP 1: Submit form to your backend
       const token = localStorage.getItem("token");
       const response = await axios.post(
         "/api/youth/submit",
@@ -135,13 +143,18 @@ export default function RegistrationForm() {
       console.log("Submit Response:", response.data);
 
       if (response.data.success) {
-        alert("✅ Profile submitted successfully! Redirecting to job recommendations...");
+        // STEP 2: ML job recommendations - DISABLED (module not found)
+        // Temporarily disabled until Step7JobRecommendations and mlJobMatchingService are available
+
+        alert("✅ Profile submitted successfully!\n\nYou can view job recommendations from your dashboard.");
+
+        // Clear form storage
         localStorage.removeItem(STORAGE_KEY);
 
-        // ADDED: Navigate to recommendations page to show ML-matched jobs
+        // Redirect to dashboard
         setTimeout(() => {
-          window.location.href = "/recommendations"; // Or use navigate if imported
-        }, 1500);
+          window.location.href = "/dashboard";
+        }, 2000);
       } else {
         alert("Submit failed: " + (response.data.error || "Unknown error"));
       }
@@ -154,7 +167,17 @@ export default function RegistrationForm() {
       } else {
         alert("Network error: " + error.message);
       }
+    } finally {
+      setLoadingJobs(false);
     }
+  };
+
+  const closeRecommendations = () => {
+    setShowRecommendations(false);
+    // Redirect to dashboard or home
+    setTimeout(() => {
+      window.location.href = "/dashboard"; // Or use navigate if imported
+    }, 500);
   };
 
   const bgStyle = {
@@ -225,8 +248,38 @@ export default function RegistrationForm() {
               />
             )}
           </div>
+
+          {/* Loading Overlay */}
+          {loadingJobs && (
+            <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+              <div className="bg-white rounded-2xl p-8 shadow-2xl text-center max-w-md">
+                <div className="animate-spin rounded-full h-16 w-16 border-b-4 border-blue-600 mx-auto mb-4"></div>
+                <h3 className="text-xl font-bold mb-2">Finding Your Perfect Jobs...</h3>
+                <p className="text-gray-600">
+                  Our AI is analyzing thousands of opportunities to find the best matches for you.
+                </p>
+                <p className="text-sm text-gray-500 mt-2">
+                  This may take 30-60 seconds on first use.
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       </div>
+
+      {/* Job Recommendations Modal - DISABLED (module not found) */}
+      {/* 
+      {showRecommendations && jobMatches && (
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
+          <div className="w-full max-w-5xl">
+            <Step7JobRecommendations
+              matches={jobMatches}
+              onClose={closeRecommendations}
+            />
+          </div>
+        </div>
+      )}
+      */}
     </div>
   );
 }

@@ -2,80 +2,63 @@ import Youth from "../models/Youth.js";
 import { uploadToCloudinary } from "../middleware/uploadMiddleware.js";
 
 // SAVE FULL FORM (Step 1 → 5)
+// SIMPLIFIED: No authentication required - uses mobile number only
 export const saveYouthForm = async (req, res) => {
   try {
-    const youthId = req.user._id;
+    const { mobile } = req.body;
 
-    const {
-      fullname,
-      fathername,
-      dob,
-      gender,
-      email,
+    console.log("📝 Form submit received. Mobile:", mobile);
 
-      permAddress,
-      permState,
-      permDistrict,
-      permPincode,
+    if (!mobile) {
+      return res.status(400).json({
+        success: false,
+        message: "Mobile number is required"
+      });
+    }
 
-      corrAddress,
-      corrState,
-      corrDistrict,
-      corrPincode,
+    // Find user by mobile
+    const youth = await Youth.findOne({ mobile });
+    if (!youth) {
+      console.log("❌ No user found with mobile:", mobile);
+      return res.status(404).json({
+        success: false,
+        message: "User not found with mobile: " + mobile + ". Please complete registration first."
+      });
+    }
 
-      qualification,
-      university,
-      passingYear,
-      grade,
+    console.log("✅ Found user:", youth._id);
 
-      skills,
-      experienceList,
-    } = req.body;
+    // Extract all fields from body
+    const updates = { ...req.body };
+    delete updates.mobile; // Don't update mobile itself
 
-    const updates = {
-      fullname,
-      fathername,
-      dob,
-      gender,
-      email,
-
-      permAddress,
-      permState,
-      permDistrict,
-      permPincode,
-
-      corrAddress,
-      corrState,
-      corrDistrict,
-      corrPincode,
-
-      qualification,
-      university,
-      passingYear,
-      grade,
-      skills,
-      experienceList,
-    };
-
-    // Upload Aadhar
+    // Handle file uploads if present
     if (req.files?.aadhar) {
       const ad = await uploadToCloudinary(req.files.aadhar[0].buffer, "aadhar_docs");
       updates["documents.aadhar"] = { url: ad.secure_url, public_id: ad.public_id };
     }
 
-    // Upload photo
     if (req.files?.photo) {
       const ph = await uploadToCloudinary(req.files.photo[0].buffer, "youth_photos");
       updates["documents.photo"] = { url: ph.secure_url, public_id: ph.public_id };
     }
 
-    const updated = await Youth.findByIdAndUpdate(youthId, updates, { new: true });
+    const updated = await Youth.findByIdAndUpdate(youth._id, updates, { new: true });
 
-    res.json({ message: "Form saved successfully", data: updated });
+    console.log("✅ Form saved successfully for:", mobile);
+
+    res.json({
+      success: true,
+      message: "Form saved successfully",
+      data: updated
+    });
 
   } catch (error) {
-    console.log(error);
-    res.status(500).json({ message: "Form submission failed" });
+    console.error("❌ Form submission error:", error);
+    res.status(500).json({
+      success: false,
+      message: "Form submission failed: " + error.message
+    });
   }
 };
 

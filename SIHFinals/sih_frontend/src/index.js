@@ -4,12 +4,16 @@ import './index.css';
 import App from './App.js';
 import reportWebVitals from './reportWebVitals.js';
 import { BrowserRouter } from "react-router-dom";
+import axios from 'axios';
+
+// Configure axios to use deployed backend URL
+axios.defaults.baseURL = process.env.REACT_APP_BACKEND_URL || 'http://localhost:5000';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-    <App />
+      <App />
     </BrowserRouter>
   </React.StrictMode>
 );

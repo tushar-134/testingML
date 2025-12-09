@@ -56,8 +56,8 @@ export default function SetPassword({ mobile: mobileProp, onSuccess }) {
 
       console.log("create-password response:", res.data);
 
-      // Clear the stored mobile number
-      localStorage.removeItem("otp_mobile");
+      // MODIFIED: Don't remove otp_mobile - it's needed for form submission
+      // localStorage.removeItem("otp_mobile");
 
       // Store token
       if (res.data.token) {
